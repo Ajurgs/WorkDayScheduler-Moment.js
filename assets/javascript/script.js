@@ -23,16 +23,13 @@ function displayHours() {
        <div class="hour">
        ${hour > 12 ? hour - 12 + " PM" : hour + " AM"} 
        </div>
-      <div class="present">placeholder</div>
-      <div class="saveBtn">save</div>
+      <textarea class="present" cols="50" rows ="3"></textarea>
+      <button class="saveBtn">save</button>
       </div>`
     );
     timeContainer.append(newChild);
   }
 }
-
-// on click enter the time blocks textbox
-// get user input for the block
 
 // on click save
 // save the current textbox
