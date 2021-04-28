@@ -61,8 +61,6 @@ function saveSchedual(event) {
   localStorage.setItem("schedual", JSON.stringify(schedual));
 }
 
-// save the current textbox
-
 // get the local saved information
 function getSavedSchedual() {
   $.each(schedual, function (index, value) {
