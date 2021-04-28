@@ -28,10 +28,13 @@ function displayHours() {
     let hour = 9 + i;
     let relTime =
       hour >= cureentHour
-        ? (hour = cureentHour)
+        ? hour == cureentHour
           ? "present"
           : "future"
         : "past";
+
+    console.log("Hour:" + hour);
+    console.log(relTime);
     // set the html of the new time block div and use a ternary operator to determine AM and PM
     let newChild = $('<div class="time-block"></div>').html(
       `<div class="row">
@@ -39,7 +42,7 @@ function displayHours() {
        ${hour > 12 ? hour - 12 + " PM" : hour + " AM"} 
        </div>
       <textarea class="decription ${relTime}" cols="50" rows ="3"></textarea>
-      <button class="saveBtn">save</button>
+      <button class="saveBtn"><i>💾</i></button>
       </div>`
     );
     timeContainer.append(newChild);
