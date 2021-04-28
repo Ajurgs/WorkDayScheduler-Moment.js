@@ -25,16 +25,14 @@ function showCurentDay() {
 // display all business hour time slots
 function displayHours() {
   for (i = 0; i < 9; i++) {
-    let hour = 9 + i;
+    let hour = 9 + i; // get 24 hour time
+    // use trenary opperator to compare if the hour is the current past or pressent time
     let relTime =
       hour >= cureentHour
         ? hour == cureentHour
           ? "present"
           : "future"
         : "past";
-
-    console.log("Hour:" + hour);
-    console.log(relTime);
     // set the html of the new time block div and use a ternary operator to determine AM and PM
     let newChild = $('<div class="time-block"></div>').html(
       `<div class="row">
